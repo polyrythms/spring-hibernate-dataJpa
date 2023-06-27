@@ -77,6 +77,18 @@
       <artifactId>hibernate-validator</artifactId>
       <version>6.1.6.Final</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate.orm</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>6.2.4.Final</version>
+    </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
     <dependency>
