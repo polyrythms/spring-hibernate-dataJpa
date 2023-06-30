@@ -9,6 +9,5 @@ hibernate.connection.password=your_password
 hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 #show sql commands in console
 hibernate.show_sql=true
-#session context
-#hibernate.current_session_context_class=thread
+
 
