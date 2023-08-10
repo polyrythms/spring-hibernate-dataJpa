@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.denis.springcourse.models.Person;
 import ru.denis.springcourse.repositories.PeopleRepository;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,12 +37,14 @@ public class PeopleService {
 
     @Transactional
     public void save(Person person) {
+        person.setCreatedAt(new Date()); //Заполним поле dateAt текущим временем
         peopleRepository.save(person);
     }
     @Transactional
     public void delete(int id) {
         peopleRepository.deleteById(id);
     }
+
     public void test() {
         System.out.println("Testing...");
 
