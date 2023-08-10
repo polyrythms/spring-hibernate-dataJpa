@@ -3,6 +3,7 @@ package ru.denis.springcourse.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.denis.springcourse.models.Mood;
 import ru.denis.springcourse.models.Person;
 import ru.denis.springcourse.repositories.PeopleRepository;
 
@@ -37,6 +38,7 @@ public class PeopleService {
 
     @Transactional
     public void save(Person person) {
+        person.setMood(Mood.CALM); //при создании настроение CALM
         person.setCreatedAt(new Date()); //Заполним поле dateAt текущим временем
         peopleRepository.save(person);
     }

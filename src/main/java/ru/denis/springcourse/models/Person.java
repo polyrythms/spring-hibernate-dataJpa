@@ -50,6 +50,18 @@ public class Person {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 
+    @Enumerated(EnumType.STRING)   //переводит STRING в enum
+                                    //по умолчанию EnumType.ORDINAL
+    private Mood mood;
+
+    public Mood getMood() {
+        return mood;
+    }
+
+    public void setMood(Mood mood) {
+        this.mood = mood;
+    }
+
     public Person() {
 
     }
